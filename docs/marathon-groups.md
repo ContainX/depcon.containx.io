@@ -7,7 +7,7 @@ first-section: Creating an Application Group
 ---
 
 {:.no-margin-top}
-# Overview
+## Overview
 
 Applications can be nested into a n-ary tree, with groups as branches and applications as leaves. Application Groups are used to partition multiple applications into manageable sets.
 

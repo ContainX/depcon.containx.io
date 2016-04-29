@@ -10,6 +10,8 @@
      * [Output Format](#output-format)
      * [Jailing Commands](#jailing-commands)
 * [Parameter Substitution](parameter-substitution)
+     * [Example Usage](#example-usage)
+     * [Value Resolution](#providing-parameters-needed-for-resolution)
 
 <span class="doc-menu-header"><img src="/assets/img/icons/marathon.svg" class="marathon"> Marathon</span>
 
@@ -27,6 +29,9 @@
   * [Destroy/Teardown](#destroyteardown-an-application-group)
   * [Converting Formats](#converting-group-formats)
 * [Blue-Green Deployment](bluegreen-deployment)
+  * [Zero Downtime](#deploying-with-zero-downtime)
+  * [Requirements](#requirements)
+  * [Depcon Usage](#depcon-usage)
 * [Managing Deploys](marathon-deployments)
 * [Server Info](marathon-server)
 * [Task Management](marathon-tasks)

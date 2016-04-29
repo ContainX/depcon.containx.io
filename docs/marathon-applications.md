@@ -52,7 +52,7 @@ and the output would be similar to [querying an application](#querying).
 
 Lets jump into a more advanced deployment by using a Docker application.  We'll also utilize the power of Depcon with parameter substitution with the descriptor template.
 
-For this example we'll create a template below in ```YAML``` format which deploy a Redis cache instance. We will also add some parameters for the version of redis and the service port we want to expose on our load balancer.
+For this example we'll create a template below in ```YAML``` format which deploy a Redis cache instance. We will also [add some parameters](/docs/parameter-substitution/) for the version of redis and the service port we want to expose on our load balancer.
 
 ```
 id: /storage/redis
