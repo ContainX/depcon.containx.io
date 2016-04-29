@@ -1,0 +1,953 @@
+---
+---
+
+// Colors
+
+$white: #fff;
+$faded-gray: #9d9d9d;
+$medium-gray: #eee;
+$medium-dark-gray: #e7e7e7;
+$dark-gray: #d4d4d4;
+
+$dark: #333;
+$black: #000;
+$faded-black: #222;
+$medium-green: #038fa7;
+$dark-blue: #0F5999;
+$red: red;
+
+$text-color: #333;
+$doc-heading-color: #08c;
+$link-color: $dark-blue;
+$link-color-bright: $red;
+
+$nav-active-color: #2D7ABD;
+$nav-color: $dark-blue;
+$nav-separator-color: $faded-gray;
+
+$code-color: rgb(51, 51, 51);
+$code-bg-color: #f5f5f5;
+$code-bg-color-dark: #474949;
+
+$header-color: $dark-blue;
+
+$footer-bg-color: $medium-gray;
+$footer-border-color: $medium-dark-gray;
+
+$pitch-color: #848484;
+$icon-color: #212121;
+
+$callout-border-color: $medium-gray;
+$callout-info-color: $dark-blue;
+$callout-warning-color: #f0ad4e;
+$callout-danger-color: #d14;
+
+// Fonts
+
+$heading-fonts: 'Open Sans', sans-serif;
+$content-fonts: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$doc-fonts: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+// Base HTML tags
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  font-size: 16px;
+}
+
+a {
+  color: $link-color;
+}
+
+h1 {
+  font-size: 46px;
+}
+
+body, h1, h2, h3, h4, h5, p > strong {
+  font-family: $heading-fonts;
+}
+
+hr {
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+code {
+  background-color: $code-bg-color;
+}
+
+// Base styles
+
+@media (max-width: 1456px) {
+  #reactive-ribbon {
+    display: none;
+  }
+}
+
+.flex {
+  flex: 1 0 auto;
+}
+
+// Needed for flexbox fix
+.container {
+  max-width: 100%;
+}
+
+// Needed for flexbox fix
+pre {
+  position: relative;
+}
+
+.colored-background {
+  background-color: $dark-blue;
+}
+
+.white-background {
+  background-color: $white;
+}
+
+.black-background {
+  background-color: $black;
+}
+
+.gray-background {
+  background-color: $medium-gray;
+}
+
+.dark-gray-background {
+  background-color: $dark-gray;
+}
+
+.black, .black:hover {
+  color: $black;
+}
+
+/*
+ * Scroll to the correct anchor position for top-fixed nav.
+ * http://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
+ */
+.container {
+  h2[id]:before {
+    content: "";
+    display: block;
+    height: 2.25em;
+    margin-top: -2.25em;
+  }
+
+  h3[id]:before {
+    content: "";
+    display: block;
+    height: 2.5em;
+    margin-top: -2.5em;
+  }
+
+  h4[id]:before {
+    content: "";
+    display: block;
+    height: 3.25em;
+    margin-top: -3.25em;
+  }
+}
+
+// Used for spacing tabs on project page
+.spacer {
+  width: 100%;
+  height: 44px;
+}
+
+// Navbar
+
+.navbar-default {
+  background-color: $white;
+
+  .navbar-brand {
+    color: $black;
+  }
+}
+
+.navbar-inverse {
+  .navbar-brand {
+    color: $white;
+  }
+}
+
+.navbar {
+  font-size: 18px;
+
+  .navbar-brand {
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-top: 18px;
+    font-size: 22px;
+
+
+    .navbar-brand-logo {
+      padding: 18px 22px;
+      background-repeat: no-repeat;
+      background-size: 38px;
+      background-position: left center;
+    }
+    .containx {
+      font-size: 14px;
+      color: $faded-gray;
+    }
+  }
+
+  .navbar-nav {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height:40px;
+
+
+    li > a {
+    //  color: $black;
+      font-size: 18px;
+      margin-top: 8px;
+      padding-top: 6px;
+      padding-bottom: 10px;
+      line-height: 22px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    li.active > a {
+      background-color: $nav-active-color;
+    }
+
+    li.active > a:hover {
+      background-color: $nav-active-color;
+    }
+
+    li:not(:last-child) {
+      border-right: 0px solid $nav-separator-color;
+    }
+  }
+
+  .version-tag {
+  	padding: 2px;
+  	display: inline-block;
+  	border-width: 3px;
+  	border-radius: 6px;
+  	font-size: 14px;
+  	color:#eee;
+  }
+
+  .nav {
+    font-family: $heading-fonts;
+  }
+}
+
+// Headers
+
+.index-header, .content-header {
+//  background-color: $header-color;
+  background-image: -o-linear-gradient(top, #0F5999 0%, #2D7ABD 62%);
+	background-image: -moz-linear-gradient(top, #0F5999 0%, #2D7ABD 62%);
+	background-image: -webkit-linear-gradient(top, #0F5999 0%, #2D7ABD 62%);
+	background-image: -ms-linear-gradient(top, #0F5999 0%, #2D7ABD 62%);
+	background-image: linear-gradient(to top, #0F5999 0%, #2D7ABD 62%);
+  h1, h2, h3, h4, h5 {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+  }
+  h3 {
+    margin-top: 0px;
+    padding-bottom: 10px;
+  }
+}
+
+.content-header {
+  margin: 0 0 10px;
+  // padding: 16.5px 0 22px;
+  padding: 0px 0px 10px;
+
+}
+//
+// .docs-header.content-header {
+//   padding: 0px 0px 10px;
+// }
+
+
+// Banner
+
+.banner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  h1 {
+    font-size: 60px;
+    padding-bottom: 0px;
+    font-family: $content-fonts;
+    font-weight: bold;
+
+    img {
+      height: 60px;
+      margin-bottom: 7px;
+    }
+  }
+
+  h2 {
+    font-weight: 200;
+    font-size:20px;
+  }
+
+  a.btn {
+    border-color: $black;
+  }
+
+  a.btn-default {
+    background-color: $medium-gray;
+  }
+
+  a.btn-inverse {
+    background-color: $faded-black;
+    color: white;
+  }
+}
+
+.project .banner h1 img {
+  margin-bottom: 18px;
+  margin-right: 6px;
+}
+
+@media (max-width: 767px) {
+  .banner {
+    padding-top: 40px;
+
+    h1 {
+      font-size: 80px;
+    }
+  }
+}
+
+// Home page
+
+.home {
+  .stack {
+    padding-top: 28px;
+    padding-bottom: 28px;
+
+    h2 {
+      font-size: 57px;
+      color: $text-color;
+      letter-spacing: -1px;
+      margin-top: 0px;
+
+      a {
+        &:hover {
+          color: $link-color-bright;
+          text-decoration: none;
+        }
+      }
+    }
+
+    p {
+      margin-top: 8px;
+      font-size: 24px;
+      font-weight: 200;
+    }
+
+    .logo-heading {
+      img {
+        width: 50px;
+        margin-top: -18px;
+        margin-left: -5px;
+        margin-right: 11px;
+      }
+
+      h2 {
+        display: inline;
+        font-size: 40px;
+
+        a {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+// Project page
+
+.project {
+  .index-header .github-btn {
+    padding-top: 4px;
+    margin-top: 30px;
+    margin-left: 10px;
+    padding-left: 10px;
+    display: inline-block;
+  }
+
+  .feature {
+    padding-top: 40px;
+    padding-bottom: 35px;
+
+    h2 {
+      font-size: 50px;
+      color: $text-color;
+      letter-spacing: -1px;
+      margin-top: 0px;
+
+      a {
+        &:hover {
+          color: $link-color-bright;
+          text-decoration: none;
+        }
+      }
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 22px;
+      font-weight: 200;
+    }
+
+    img {
+      width: 200px;
+    }
+
+    .svg  {
+      width: 200px;
+
+      path {
+        fill: $icon-color;
+      }
+    }
+
+    .svgcolor  {
+      width: 200px;
+    }
+
+    .nav-tabs {
+      border: none;
+
+      li {
+        margin-bottom: 0px;
+
+        a, a:hover {
+          border: 1px solid $dark-gray;
+          background-color: #F9F9F9;
+        }
+
+        &.active a {
+          border: 1px solid $nav-active-color;
+          background-color: $nav-active-color;
+          color: $white;
+        }
+      }
+    }
+
+    pre {
+      border: 0px;
+      border-radius: 10px;
+      border-top-left-radius: 0px;
+      background-color: $code-bg-color-dark;
+
+      code {
+        min-height: 250px;
+        margin-bottom: 0px;
+
+        &.hljs {
+          background-color: $code-bg-color-dark;
+          color: #F4F4F5;
+        }
+      }
+    }
+
+    &.intro {
+      background-color: $white;
+      padding-top: 23px;
+      padding-bottom: 43px;
+
+      h2 {
+        font-size: 42px;
+      }
+
+      p {
+        font-size: 21px;
+      }
+    }
+
+    &.get-started {
+      padding-bottom: 0px;
+
+      h2 {
+        color: $white;
+      }
+
+      .doc-btn {
+        color: $white;
+        border-color: $black;
+        margin-top: 27px;
+        margin-right: 5px;
+        font-size: 23px;
+      }
+    }
+  }
+}
+
+// Info page
+
+.info {
+  h2 {
+    border-left: 8px solid $header-color;
+    margin-top: 0px;
+    padding: 10px 15px;
+
+    span {
+      position: absolute;
+      top: -70px;
+    }
+  }
+
+  h3 {
+    color: $text-color;
+  }
+
+  // Documentation page
+
+  .documentation {
+    .project {
+      p {
+        margin-top: 10px;
+      }
+
+      .logo-heading {
+        margin-top: 18px;
+
+        img {
+          width: 28px;
+          margin-top: -10px;
+          margin-left: -5px;
+          margin-right: 7px;
+        }
+
+        h3 {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  // Community page
+
+  .community {
+
+    img.rackspace {
+      height: 50px;
+      margin-bottom: 5px;
+    }
+    .contributor {
+      margin-top: 10px;
+      margin-bottom: 15px;
+
+      .svg {
+        height: 20px;
+
+        path {
+          fill: $icon-color;
+        }
+      }
+
+      .contributor-left {
+        display: table-cell;
+
+        img {
+          width: 75px;
+          height: 75px;
+          border-radius: 5px;
+        }
+      }
+
+      .contributor-body {
+        display: table-cell;
+        vertical-align: top;
+        padding-left: 14px;
+
+        h4 {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}
+
+// Docs page
+
+.docs {
+  line-height: 1.5em;
+  font-family: $doc-fonts;
+  font-size: 16px;
+
+  .no-margin-top {
+    margin-top: 0px;
+  }
+
+  .pitch {
+    color: $pitch-color;
+    margin-top: 0px;
+    margin-bottom: 29px;
+    font-style: italic;
+  }
+
+  #doc-index {
+    h2, h4 {
+      color: $text-color;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-top: 8px;
+    }
+  }
+
+  p, h1, h2, h3, h4, h5 {
+    margin-top: 20px;
+  }
+
+  pre, table {
+    margin-top: 15px;
+  }
+
+  h1, h2, h3, h4, h5 {
+    a.header-anchor {
+      padding-left: 15px;
+    }
+
+    a.header-anchor:after {
+      content: "\F0C1";
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-size: .7em;
+    }
+
+    a.header-anchor:link, a.header-anchor:visited {
+      visibility: hidden;
+    }
+  }
+
+  h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    a.header-anchor {
+      color: #999;
+      visibility: visible;
+    }
+
+    a.header-anchor:hover {
+      color: $text-color;
+      text-decoration: none;
+    }
+  }
+
+  h1, h2, h3, h4, h5 {
+    color: $doc-heading-color;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  table, th, td {
+    border: 1px solid #DDD;
+  }
+
+  tbody tr:nth-child(odd) td, table.docutils tbody tr:nth-child(odd) th {
+    background-color: #f9f9f9;
+  }
+
+  th, td {
+    padding: 10px;
+    vertical-align: top;
+  }
+
+  .nav-tabs {
+    margin-bottom: 13px;
+  }
+
+  .tab-pane {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  pre > code {
+    background-color: $code-bg-color;
+  }
+
+  code {
+    padding: 1px 1px;
+  }
+
+  pre.console {
+    border: 0px;
+    border-radius: 0px;
+    background-color: $code-bg-color-dark;
+
+    code {
+      min-height: 25px;
+
+      &.hljs {
+        background-color: $code-bg-color-dark;
+        color: #F4F4F5;
+      }
+    }
+  }
+
+  pre.descriptor {
+    code {
+      max-height: 300px;
+      overflow-y: scroll;
+    }
+  }
+
+  pre.command {
+    border-radius: 10px;
+  }
+
+
+  blockquote {
+    margin: 20px 0px 25px;
+    font-style: italic;
+    border-left: 5px solid $link-color;
+    font-family: $heading-fonts;
+
+    p {
+      margin-top: 0px;
+    }
+  }
+
+  .text-center > em {
+    display: block; // Force em tags to start on newline
+  }
+
+  #toc h3 {
+    margin-top: 0px;
+  }
+
+  #toc ul, #doc-index ul {
+    padding-left: 20px;
+    list-style-position: inside;
+  }
+
+  #toc > ul > li, #doc-index > ul > li > ul, #toc .doc-menu-header {
+    display: none;
+  }
+}
+
+.doc-menu-header {
+  font-size: 18px;
+
+  img {
+  }
+
+  img.introduction,  {
+    width: 24px;
+    margin-top: -4px;
+  }
+
+  img.marathon {
+    width: 16px;
+    margin-top: -4px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  img.resources {
+    width: 20px;
+    margin-top: -2px;
+    margin-right: 4px;
+  }
+
+  img.operations {
+    width: 16px;
+    margin-top: -2px;
+    margin-right: 6px;
+  }
+
+  img.architecture {
+    width: 20px;
+    margin-top: -4px;
+    margin-right: 4px;
+  }
+}
+
+// Sidebar
+
+#sidebar {
+  padding: 0;
+  font-size: 15px;
+
+  // Enables independant sidebar scrolling
+  overflow-y: auto;
+  max-height: calc(100vh - 100px);
+
+  ul {
+    list-style: none;
+
+    > .active > a, > .current > a {
+      color: $link-color-bright;
+    }
+  }
+
+  > ul {
+    padding-left: 23px;
+  }
+
+  > ul {
+    > li > ul li {
+      padding-left: 20px;
+    }
+
+    ul {
+      display: none;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+
+  li a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  ul > li > a {
+    padding-bottom: 5px;
+    padding-left: 5px;
+    position: relative;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #sidebar {
+    ul > .active > ul, ul > .current > ul {
+      display: block;
+    }
+
+    &.affix, &.affix-bottom {
+      width: 213px;
+    }
+
+    &.affix {
+      position: fixed;
+
+      /* Undo the static from mobile first approach */
+      top: 80px;
+    }
+
+    &.affix-bottom {
+      position: absolute;
+
+      /* Undo the static from mobile first approach */
+    }
+  }
+
+  #sidebar > .sidebar-menu-header {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* Widen the fixed sidebar again */
+
+  #sidebar {
+    &.affix-bottom, &.affix {
+      width: 263px;
+    }
+  }
+}
+
+// Footer
+
+footer {
+  background-color: $footer-bg-color;
+  padding-top: 20px;
+  padding-bottom: 27px;
+  margin-top: 50px;
+
+  h3, h4 {
+    color: $text-color;
+  }
+
+  .license {
+    margin-top: 19px;
+  }
+}
+
+// Callouts
+
+p.callout {
+  padding: 20px;
+  margin: 25px 0;
+  border: 1px solid $callout-border-color;
+  border-left-width: 5px;
+  border-radius: 3px;
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  code {
+    border-radius: 3px;
+  }
+
+  + .callout {
+    margin-top: -5px;
+  }
+
+  &.callout-info {
+    border-left-color: $callout-info-color;
+
+    h4 {
+      color: $callout-info-color;
+    }
+  }
+
+  &.callout-warning {
+    border-left-color: $callout-warning-color;
+
+    h4 {
+      color: $callout-warning-color;
+    }
+  }
+
+  &.callout-danger {
+    border-left-color: $callout-danger-color;
+
+    h4 {
+      color: $callout-danger-color;
+    }
+  }
+}
+
+
+div.navbar-inverse .navbar-nav>.active>a,
+div.navbar-inverse .navbar-nav>.active>a:hover {
+	background-color: #2D7ABD;
+}

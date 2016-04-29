@@ -1,0 +1,26 @@
+baseurl: ""
+url: "http://depcon.containx.io"
+
+permalink: pretty
+markdown: kramdown
+highlighter:
+kramdown:
+  input: GFM
+  enable_coderay: false
+  syntax_highlighter_opts:
+    disable : true
+
+depcon-version: 0.8.2
+repo-org: gondor
+repo-name: depcon
+
+containx-url: "http://containx.io"
+depcon-url: "http://depcon.containx.io"
+netshare-url: "https://github.com/gondor/docker-volume-netshare"
+marathonldap-url: "https://github.com/ContainX/marathon-ldap"
+mesoslog-url: "https://github.com/ContainX/go-mesoslog"
+
+exclude: [support, Dockerfile]
+pkgs:
+  all:
+    nginx

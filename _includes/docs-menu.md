@@ -1,0 +1,32 @@
+<span class="doc-menu-header"><img src="/assets/img/icons/introduction.svg" class="introduction"> Introduction</span>
+
+* [Getting Started](getting-started)
+  * [Installation](#installation)
+    * [Binary Installation](#binary-installation)
+    * [Building Source](#building-source)
+    * [Depcon in Docker](#depcon-in-docker)
+  * [Configuration](#configuration)
+     * [Environments](#environments)
+     * [Output Format](#output-format)
+     * [Jailing Commands](#jailing-commands)
+* [Parameter Substitution](parameter-substitution)
+
+<span class="doc-menu-header"><img src="/assets/img/icons/marathon.svg" class="marathon"> Marathon</span>
+
+* [Applications](marathon-applications)
+  * [Creating](#creating)
+  * [Updating](#updating-memory-and-cpu-for-running-applications)
+  * [Querying](#querying)
+  * [Destroy/Teardown](#destroyteardown-an-application)
+  * [Rollback](#rollback)
+  * [Scaling](#scaling)
+  * [Converting Formats](#converting-between-formats)
+* [Application Groups](marathon-groups)
+  * [Creating](#creating-an-application-group)
+  * [Querying](#querying-application-groups)
+  * [Destroy/Teardown](#destroyteardown-an-application-group)
+  * [Converting Formats](#converting-group-formats)
+* [Blue-Green Deployment](bluegreen-deployment)
+* [Managing Deploys](marathon-deployments)
+* [Server Info](marathon-server)
+* [Task Management](marathon-tasks)

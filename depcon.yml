@@ -1,0 +1,40 @@
+---
+id: /sites/depcon
+cpus: 0.5
+mem: 300.0
+instances: 1
+container:
+  type: DOCKER
+  docker:
+    image: containx/depcon-site:latest
+    network: BRIDGE
+    forcePullImage: true
+    parameters:
+    - key: label
+      value: Name=site
+    - key: label
+      value: System=depcon
+    portMappings:
+    - containerPort: 80
+      hostPort: 0
+      servicePort: 4010
+      protocol: tcp
+uris:
+- file:///etc/docker.tar.gz
+env:
+  TAGS: website,depcon,mesos,marathon
+  DEPLOYED_VERSION: 'latest'
+labels:
+  group: site
+  role: depcon
+  HAPROXY_GROUP: external
+  HAPROXY_0_VHOST: depcon.containx.io
+healthChecks:
+- path: /
+  portIndex: 0
+  protocol: HTTP
+  gracePeriodSeconds: 120
+  intervalSeconds: 30
+  timeoutSeconds: 20
+  maxConsecutiveFailures: 3
+  ignoreHttp1xx: false

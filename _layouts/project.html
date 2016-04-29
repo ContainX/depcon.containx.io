@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include vars.inc %}
+  <head>
+{% include head.html %}
+    <link href="/assets/css/styles/rainbow.css" rel="stylesheet">
+  </head>
+  <body class="colored-background">
+
+{% include navbar.html %}
+
+<div class="flex project">
+  <div class="index-header" id="content">
+    <div class="container">
+      <div class="banner text-center">
+        <h1><img src="/assets/img/logos/{{ page.project }}-white.png" />{{ project-name }}</h1>
+        <h3>{{ project-title }}</h3>
+        <a href="/docs/getting-started" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-book"></span>  Docs</a>
+        <a href="https://github.com/{{ site.repo-org }}/{{ site.repo-name }}/releases/tag/v{{ site.depcon-version }}" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-download"> </span>  Download</a>
+        <a href="https://github.com/{{ site.repo-org }}/{{ site.repo-name }}/" target="_blank" class="btn btn-default btn-default btn-lg"><span class="glyphicon glyphicon-star"> </span>  Star</a>
+      </div>
+    </div>
+  </div>
+{{ content }}
+</div>
+
+{% include footer.html %}
+
+{% include scripts.html %}
+
+  </body>
+</html>
