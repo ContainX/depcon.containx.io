@@ -1,12 +1,12 @@
 ---
 id: /sites/depcon
 cpus: 0.5
-mem: 300.0
+mem: 400.0
 instances: 1
 container:
   type: DOCKER
   docker:
-    image: containx/depcon-site:latest
+    image: containx/depcon-site:${VERSION}
     network: BRIDGE
     forcePullImage: true
     parameters:
