@@ -16,14 +16,13 @@ RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 573BFD6B3D8FBC64107
         && echo "source 'https://rubygems.org'\ngem 'github-pages'\n" > Gemfile \
         && gem install bundler \
         && bundle install
-	
-EXPOSE 4000
+
 EXPOSE 80
 
 COPY . /src
 COPY support/ /
 WORKDIR /src
+ENV JEKYLL_ENV=production
 RUN cd /src  && jekyll build
 
 CMD ["nginx", "-g", "daemon off;"]
-

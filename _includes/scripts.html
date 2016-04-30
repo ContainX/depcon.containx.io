@@ -3,3 +3,6 @@
     <script src="/assets/js/scripts.js"></script>
     <script src="/assets/js/ekko-lightbox.min.js"></script>
     <script src="/assets/js/highlight.pack.js"></script>
+    {% if jekyll.environment == "production" %}
+    <script src="/assets/js/ga.js"></script>
+    {% endif %}

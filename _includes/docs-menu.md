@@ -39,3 +39,7 @@
   * [Cluster Leader](#cluster-leader)
   * [Ping](#ping)
 * [Task Management](marathon-tasks)
+
+<span class="doc-menu-header"><img src="/assets/img/icons/automates.svg" class="marathon"> Automation</span>
+
+* [Travis CI](travis)
