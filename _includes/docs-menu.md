@@ -12,6 +12,7 @@
 * [Parameter Substitution](parameter-substitution)
      * [Example Usage](#example-usage)
      * [Value Resolution](#providing-parameters-needed-for-resolution)
+* [Global Options](global-options)
 
 <span class="doc-menu-header"><img src="/assets/img/icons/marathon.svg" class="marathon"> Marathon</span>
 
