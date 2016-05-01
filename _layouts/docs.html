@@ -79,10 +79,10 @@
         var offsetTop      = $sideBar.offset().top
         var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10)
         var navOuterHeight = $('.navbar-fixed-top').height()
-        return (this.top = offsetTop - navOuterHeight - sideBarMargin - 20)
+        return (this.top = offsetTop - navOuterHeight - sideBarMargin - 15)
       },
       bottom: function () {
-        footerHeightOffset = 150 // Adjust for footer height
+        footerHeightOffset = 200 // Adjust for footer height
         return (this.bottom = $('#footer').outerHeight(true) + footerHeightOffset)
       }
     }

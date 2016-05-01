@@ -115,7 +115,7 @@ $ depcon app update mem 300
 
 **List all running Applications**
 
-Using the syntax ```depcon app list``` command will output listing of all running applications.  
+Using the syntax ```depcon app list``` will output listing of all running applications.  
 
 {:.console}
 ```
