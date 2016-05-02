@@ -11,7 +11,7 @@ kramdown:
     disable : true
 
 depcon-version: 0.8.2
-repo-org: gondor
+repo-org: ContainX
 repo-name: depcon
 
 containx-url: "http://containx.io"
