@@ -34,7 +34,7 @@ Depcon makes managing clusters that run docker containers a breeze.  It offers t
 
 ### Binary Installation
 
-Binaries are available through GitHub releases.  You can download the appropriate binary, package and version from the [Releases](https://github.com/containx/depcon/releases) page
+Binaries are available through GitHub releases.  You can download the appropriate binary, package and version from the [Releases](https://github.com/ContainX/depcon/releases) page
 
 ### Building Source
 
@@ -47,7 +47,7 @@ Add Depcon and its package dependencies to your go `src` directory
 
 {:.console .command}
 ```
-$ go get -v github.com/containx/depcon
+$ go get -v github.com/ContainX/depcon
 ```
 
 Once the `get` has completed, you should find your new `depcon` (or `depcon.exe`) executable sitting inside the `$GOPATH/bin/`
@@ -56,7 +56,7 @@ To update Depcon's dependencies, use `go get` with the `-u` option.
 
 {:.console .command}
 ```
-go get -u -v github.com/containx/depcon
+go get -u -v github.com/ContainX/depcon
 ```
 
 ### Depcon in Docker
