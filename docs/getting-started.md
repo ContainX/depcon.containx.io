@@ -47,7 +47,7 @@ Add Depcon and its package dependencies to your go `src` directory
 
 {:.console .command}
 ```
-$ go get -v github.com/gondor/depcon
+$ go get -v github.com/containx/depcon
 ```
 
 Once the `get` has completed, you should find your new `depcon` (or `depcon.exe`) executable sitting inside the `$GOPATH/bin/`
@@ -56,7 +56,7 @@ To update Depcon's dependencies, use `go get` with the `-u` option.
 
 {:.console .command}
 ```
-go get -u -v github.com/gondor/depcon
+go get -u -v github.com/containx/depcon
 ```
 
 ### Depcon in Docker
@@ -69,7 +69,7 @@ First, run Depcon in the background capture cid and add an alias
 
 {:.console .command}
 ```
-$ cid=$(docker run -itd -v $PWD:/data pacesys/depcon)
+$ cid=$(docker run -itd -v $PWD:/data containx/depcon)
 $ alias depcon="docker exec -it ${cid} depcon"
 ```
 

@@ -91,7 +91,7 @@ script:
 after_success:
   - docker push containx/depcon-site
   - docker push containx/depcon-site:$TRAVIS_BUILD_NUMBER
-  - docker run -e DEPCON_MODE#=$DEPCON_MODE -e MARATHON_HOST=$MARATHON_HOST -e MARATHON_USER=$MARATHON_USER -e MARATHON_PASS=$MARATHON_PASS -v $PWD:/data pacesys/depcon app create /data/depcon.yml -p VERSION=$TRAVIS_BUILD_NUMBER --wait --force
+  - docker run -e DEPCON_MODE#=$DEPCON_MODE -e MARATHON_HOST=$MARATHON_HOST -e MARATHON_USER=$MARATHON_USER -e MARATHON_PASS=$MARATHON_PASS -v $PWD:/data containx/depcon app create /data/depcon.yml -p VERSION=$TRAVIS_BUILD_NUMBER --wait --force
 ```
 
 So lets break down in sequence what the above file is doing:
