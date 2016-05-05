@@ -209,4 +209,36 @@ To convert an existing ```app-descriptor.json``` to ```app.descriptor.yaml execu
 $ depcon app convert app-descriptor.json app-descriptor.yaml
 ```
 
+### View/Tail Application Logs
+
+Depcon offers the ability to view/tail logs for running applications on Mesos w/ Marathon.  This is a new feature introduced in version 0.8.4 and is currently in beta.
+
+{:.console .command}
+```nohighlight
+Usage:
+  depcon app log [appId] [flags]
+
+Flags:
+  -f, --follow[=false]: Tail/Follow log
+  -h, --help[=false]: help for log
+  -p, --poll=5: Log poll time (duration) in seconds
+  -s, --stderr[=false]: Show StdErr vs default StdOut log
+```
+
+**Printing remote logs to the console**
+
+{:.console .command}
+```
+$ depcon app log /myapplication
+```
+
+**Tail remote logs**
+
+Similar to printing logs to the console but with an additional ```-f``` flag
+
+{:.console .command}
+```
+$ depcon app log /myapplication -f
+```
+
 {% include common-links.html %}

@@ -24,6 +24,7 @@
   * [Rollback](#rollback)
   * [Scaling](#scaling)
   * [Converting Formats](#converting-between-formats)
+  * [Remote Log Viewing](#viewtail-application-logs)
 * [Application Groups](marathon-groups)
   * [Creating](#creating-an-application-group)
   * [Querying](#querying-application-groups)
