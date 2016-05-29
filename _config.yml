@@ -16,7 +16,7 @@ repo-name: depcon
 
 containx-url: "http://containx.io"
 depcon-url: "http://depcon.containx.io"
-netshare-url: "https://github.com/gondor/docker-volume-netshare"
+netshare-url: "http://netshare.containx.io"
 marathonldap-url: "https://github.com/ContainX/marathon-ldap"
 mesoslog-url: "https://github.com/ContainX/go-mesoslog"
 
